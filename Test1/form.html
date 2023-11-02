@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ĐĂNG KÍ THÀNH VIÊN</h1>
+    <form action="" id="my-frm" onsubmit="return validate()">
+        <label for="">Họ và tên</label>
+        <input type="text" name="hoTen">
+        <p id="hoTenError"></p>
+        <label for="">Số điện thoại</label>
+        <input type="text" name="sdt">
+        <p id="sdtError"></p>
+        <label for="">Email</label>
+        <input type="text" name="email">
+        <p id="emailError"></p>
+        <label for="">Tên đăng nhập</label>
+        <input type="text" name="user">
+        <p id="userError"></p>
+        <label for="">Mật khẩu</label>
+        <input type="text" name="pass">
+        <p id="passError"></p>
+        <label for="">Nhập lại mật khẩu</label>
+        <input type="text" name="repass">
+        <p id="repassError"></p>
+        <label for="">Câu lạc bộ muốn tham gia</label>
+        <select name="clb" id="" onchange="chonCLB()">
+            <option value="0">------ CHỌN ------</option>
+            <option value="1">Handmade</option>
+            <option value="2">Tổ chức sự kiện</option>
+            <option value="3">Tình nguyện</option>
+            <option value="4">Nghệ thuật</option>
+        </select>
+        <p id="clbError"></p>
+        <label for="">Phí tham gia</label>
+        <input type="text" name="phiTG"><br><br>
+        <label for="">Hình thức tham gia</label>
+        <input type="radio" name="hinhThuc" value="1" onclick="chonHT()">Online
+        <input type="radio" name="hinhThuc" value="2" onclick="chonHT()">Offline<br><br>
+        <label for="">Phí cơ sở vật chất</label>
+        <input type="text" name="phiCSVC">
+        <p id="csvcError"></p>
+        <label for="">Tổng phí</label>
+        <input type="text" name="tongPhi">
+        <p id="phiError"></p>
+        <input type="submit" value="Đăng Kí">
+    </form>
+    <script src="form.js"></script>
+</body>
+</html>

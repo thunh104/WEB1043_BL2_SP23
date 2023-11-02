@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>ĐĂNG KÝ</h1>
+    <form action="" id="my-frm" onsubmit="return validate()">
+        <label for="">User</label>
+        <input type="text" name="user"><br><br>
+        <p id="userError"></p>
+        <label for="">Password</label>
+        <input type="text" name="pass"><br><br>
+        <p id="passError"></p>
+        <label for="">Repass</label>
+        <input type="text" name="repass"><br><br>
+        <p id="rePassError"></p>
+        <label for="">Môn học :</label>
+        <select name="mon" id="" onchange="chonMon()">
+            <option value="0">----- CHỌN -----</option>
+            <option value="1">HTML</option>
+            <option value="2">JavaScript</option>
+            <option value="3">PHP</option>
+        </select><br><br>
+        <p id="monHocError"></p>
+        <label for="">Số lượng</label>
+        <input type="text" name="soLuong"><br><br>
+        <label for="">Email</label>
+        <input type="text" name="eMail">
+        <p id="emailError"></p>
+        <button type="submit">ĐĂNG KÝ</button>
+    </form>
+    <script src="vd2.js"></script>
+</body>
+
+</html>

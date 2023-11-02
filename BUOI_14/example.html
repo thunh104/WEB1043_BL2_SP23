@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HOÁ ĐƠN TRÀ SỮA</h1>
+    <form action="" id="my-frm" onsubmit="return validate()">
+        <label for="">Tên khách :</label>
+        <input type="text" name="khach">
+        <p id="khachError"></p>
+        <label for="">Size :</label>
+        <select name="size" id="" onchange="chonSize()">
+            <option value="0">----- CHỌN -----</option>
+            <option value="1">S</option>
+            <option value="2">M</option>
+            <option value="3">L</option>
+        </select>
+        <p id="sizeError"></p>
+        <label for="">Đơn giá</label>
+        <input type="text" name="donGia"><br><br>
+        <label for="">Số lượng</label>
+        <input type="text" name="soLuong">
+        <p id="soLuongError"></p>
+        <label for="">Khuyến mãi</label>
+        <input type="radio" name="khuyenMai" value="1" onclick="chonKM()">Có
+        <input type="radio" name="khuyenMai" value="2" onclick="chonKM()">Không
+        <p id="khuyenMaiError"></p>
+        <label for="">Tiền khuyến mãi</label>
+        <input type="text" name="tkm"><br><br>
+        <label for="">Thành tiền</label>
+        <input type="text" name="thanhTien"><br><br>
+        <button type="submit">ĐẶT HÀNG</button>
+    </form>
+    <script src="ex.js"></script>
+</body>
+</html>

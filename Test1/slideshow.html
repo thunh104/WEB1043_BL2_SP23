@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="loadAnh(); showSlide();">
+    <button onclick="start()">Start</button>
+    <button onclick="back()">Back</button>
+    <img src="IMG/p1" alt="" id="anh" width="750" height="500">
+    <button onclick="next()">Next</button>
+    <button onclick="stop()">Stop</button>
+    <script>
+        let arrAnh = [];
+        let flag = null;
+        let chiSoHienTai = 1;
+        function loadAnh(){
+            for(let i = 1; i < 6; i++){
+                arrAnh[i] = new Image();
+                arrAnh[i].src = "IMG/p" + i + ".jpg";
+            }
+        }
+        function next(){
+            if(chiSoHienTai < 5){
+                chiSoHienTai ++;
+                document.getElementById("anh").src = arrAnh[chiSoHienTai].src;
+            }
+        }
+        function back(){
+            if(chiSoHienTai > 1){
+                chiSoHienTai --;
+                document.getElementById("anh").src = arrAnh[chiSoHienTai].src;
+            }
+        }
+        function showSlide(){
+            chiSoHienTai ++;
+            if(chiSoHienTai > 4){
+                chiSoHienTai = 1;
+            }
+            flag = setTimeout(showSlide, 1000);
+            document.getElementById("anh").src = arrAnh[chiSoHienTai].src;
+        }
+        function stop(){
+            if(flag != null){
+                clearTimeout(flag);
+                flag = null;
+            }
+        }
+        function start(){
+            if(flag == null){
+                showSlide();
+            }
+        }
+    </script>
+</body>
+</html>

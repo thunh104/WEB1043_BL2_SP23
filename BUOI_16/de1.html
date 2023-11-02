@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h3>ĐĂNG KÍ KHÓA HỌC ONLINE</h3>
+    <form action="" id="my_frm" onsubmit="return validate()">
+        <label for="">Họ tên</label>
+        <input type="text" name="hoten">
+        <p id="hotenError"></p>
+        <label for="">Số điện thoại</label>
+        <input type="text" name="sdt" id="">
+        <p id="sdtError"></p>
+        <label for="">Email</label>
+        <input type="text" name="email">
+        <p id="emailError"></p>
+        <label for="">User</label>
+        <input type="text" name="user">
+        <p id="userError"></p>
+        <label for="">Password</label>
+        <input type="text" name="pass">
+        <p id="passError"></p>
+        <label for=""> RePass</label>
+        <input type="text" name="repass">
+        <p id="repassError"></p>
+        <label for="">Khóa học</label>
+            <select name="kh" id="" onchange="chonkh()">
+                <option value="">-----Chọn-----</option>
+                <option value="1">HTML</option>
+                <option value="2">JS</option>
+                <option value="3">PHP</option>
+            </select>
+            <p id="khoahocError"></p>
+            <label for="">Học phí</label>
+            <input type="text" name="hp"><br><br>
+        <label for="">Hình thức học</label>
+        <input type="radio" name="ht" value="1" onclick="chonht()">Tại trường
+        <input type="radio" name="ht" value="2" onclick="chonht()">Online
+        <p id="htError"></p>
+        <label for="">Phí cơ sở vật chất:</label>
+        <input type="text" name="pcsvc"><br><br>
+        <label for="">Học phí:</label>
+        <input type="text" name="tt" id=""><br><br>
+        <input type="submit" value="Đăng kí">
+    </form>
+    <script src="form.js"></script>
+</body>
+</html>

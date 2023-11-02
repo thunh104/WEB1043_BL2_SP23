@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="welcome">Hi there</div>
+    <form action="">
+        <input type="checkbox" name="test" value="how">Hoài Thu
+        <input type="checkbox" name="test" value="are">Thu Trang
+        <input type="checkbox" name="test" value="you">Việt Hoàng
+        <input type="checkbox" name="test" value="?">?
+    </form>
+    <script>
+        let arrCk = document.getElementsByName("test");
+        // console.log(arrCk);
+        let str = "";
+        for( let i = 0; i < arrCk.length; i++){
+            str = str + arrCk[i].value + " ";
+        }
+        alert(str);
+    </script>
+</body>
+</html>

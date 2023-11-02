@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="my_frm">
+        <input type="text" name="firstname" placeholder="First Name"/>
+        <input type="text" name="lastname" placeholder="Last Name"/>
+        <input type="button" onclick="sendInfor()" value="Submit"/>
+    </form>
+    <h1 id="welcome"></h1>
+    <script>
+        function sendInfor(){
+            let inputs = document.getElementById("my_frm").elements;
+            // console.log(inputs[0].value);
+            console.log(inputs.lastname.value);
+            let m = " Welcome : "+inputs[0].value + " " + inputs.lastname.value;
+            // alert(m);
+            // document.getElementById("welcome").innerHTML = m;
+            message(m);
+        }
+        function message(m){
+            document.getElementById("welcome").innerHTML = m;
+        }
+    </script>
+</body>
+</html>

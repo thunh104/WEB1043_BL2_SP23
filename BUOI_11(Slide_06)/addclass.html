@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hide{
+            display: none;
+        }
+        .square{
+            height: 100px;
+            width: 100px;
+            background: palevioletred;
+        }
+        .blue{
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="shape" class="square blue hide"></div>
+    <button onclick="toogle()">Disappear</button>
+    <script>
+        // Thêm class vào phần tử
+        function disappear(){
+            //1. Truy cập đến nút có id là shape
+            let el = document.getElementById("shape");
+            //2. Thêm class có tên là hide vào nút đã truy cập
+            el.classList.add("hide");
+        }
+        // Xoá class khỏi một phần tử
+        function removeClass(){
+            let el = document.getElementById("shape");
+            el.classList.remove("blue");
+        }
+        function toogle(){
+            let el = document.getElementById("shape");
+            if(!el.classList.contains('hide')){
+                el.classList.add("hide");
+            }
+            else{
+                el.classList.remove('hide');
+            }
+        }
+    </script>
+</body>
+</html>
